@@ -1658,6 +1658,7 @@ trait Sharing {
 			$group,
 			$permissions
 		);
+		$this->pushToLastStatusCodesArrays();
 	}
 
 	/**
@@ -1915,6 +1916,7 @@ trait Sharing {
 		}
 		$language = TranslationHelper::getLanguage($language);
 		$this->getShareData($user, (string)$share_id, $language);
+		$this->pushToLastStatusCodesArrays();
 	}
 
 	/**
